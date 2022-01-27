@@ -1,7 +1,7 @@
 <template>
-    <el-carousel :interval="4000" type="card" height="200px">
+    <el-carousel :interval="4000" type="card" height="200px" :autoplay="false" trigger="clicl">
         <el-carousel-item v-for="item in list" :key="item">
-            <img :src="item.imageUrl" alt="">
+            <el-image :src="item.imageUrl" fit="contain" style="width:380px;height: 140px;"></el-image>
         </el-carousel-item>
   </el-carousel>
 </template>
@@ -24,26 +24,6 @@ export default {
                 }
             },
             list: []
-        }
-    },
-    computed: {
-        // swiper () {
-        //     return this.$refs.mySwiper.$swiper
-        // }
-    },
-    created() {
-        this.fetchData();   
-    },
-    methods: {
-        async fetchData() {
-            const res = await this.$axios.get('/banner');
-            if(res.code === 200) {
-                this.list = res.banners;
-            }
-            console.log(res);
-        },
-        pathHandler(item) {
-            window.open(item.url, '_blank')
         }
     }
 }
