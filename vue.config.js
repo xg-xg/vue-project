@@ -18,7 +18,8 @@ module.exports = {
           changeOrigin: true
         },
         '/': {
-          target: 'http://localhost:3000/', // 用的网易的api文档 本地启的服务
+          // target: 'http://localhost:3000/', // 用的网易的api文档 本地启的服务
+          target: 'https://netease-cloud-music-api-pearl-iota.vercel.app/', // 线上文档代理地址
           changeOrigin: true
         }
   

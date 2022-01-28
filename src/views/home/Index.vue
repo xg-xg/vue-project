@@ -1,5 +1,6 @@
 <template>
     <div  class="w1200">
+        <!-- <audio controls src="../../assets/audio.mp3"></audio> -->
         <BannerSwiper :data-list="bannerList" image-url="imageUrl" style="margin-top: 20px"></BannerSwiper>
         <HotSongs style="margin: 20px 0"></HotSongs>
     </div>
