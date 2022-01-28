@@ -1,11 +1,14 @@
 {
   "name": "vue-demo",
   "version": "0.1.0",
+  "homepage": "https://xg-xg.github.io/vue-project",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@jiaminghi/data-view": "^2.10.0",
@@ -27,6 +30,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
+    "gh-pages": "^3.2.3",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
